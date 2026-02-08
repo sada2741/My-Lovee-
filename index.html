@@ -3,99 +3,66 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Valentine Cards 💖</title>
+<title>Valentine ❤️</title>
 
 <style>
 body{
   margin:0;
   background:#ffd6dc;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Page container */
-.pages{
   display:flex;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
+  justify-content:center;
+  align-items:center;
   height:100vh;
+  font-family:'Segoe UI', sans-serif;
 }
 
-.page{
-  min-width:100vw;
-  scroll-snap-align:start;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.heart-container{
+  width:90vw;
+  max-width:420px;
 }
 
-/* Card style */
-.card{
-  width:85%;
-  max-width:360px;
-  background:#fff;
-  border-radius:18px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
+text{
+  fill:white;
+  text-anchor:middle;
 }
-
-/* Heart card */
-.heart{
-  background:#e63946;
-  color:#fff;
-  position:relative;
-  transform:rotate(-45deg);
-  width:300px;
-  height:280px;
+.title{
+  font-size:26px;
+  font-weight:700;
 }
-
-.heart::before,
-.heart::after{
-  content:"";
-  position:absolute;
-  background:#e63946;
-  border-radius:50%;
-  width:300px;
-  height:280px;
-}
-
-.heart::before{ top:-130px; left:0; }
-.heart::after{ left:130px; top:0; }
-
-.heart-text{
-  position:absolute;
-  inset:0;
-  transform:rotate(45deg);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-
-.heart-text h1{
-  margin:0;
-  font-size:1.25rem;
-}
-
-.hheart-text p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  max-width: 220px;
-}
-
-/* Simple cards text */
-.simple{
-  color:#e63946;
-  font-size:1.1rem;
-  font-weight:600;
+.msg{
+  font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="pages">
+<div class="heart-container">
+<svg viewBox="0 0 500 450" width="100%" height="auto">
+  
+  <!-- HEART SHAPE -->
+  <path
+    d="M250 420
+       L40 210
+       A120 120 0 1 1 250 90
+       A120 120 0 1 1 460 210
+       Z"
+    fill="#e63946"
+  />
+
+  <!-- TEXT -->
+  <text x="250" y="200" class="title">Hey My Love ❤️</text>
+
+  <text x="250" y="235" class="msg">You are my favorite smile,</text>
+  <text x="250" y="260" class="msg">my safe place,</text>
+  <text x="250" y="285" class="msg">and my forever Valentine 💕</text>
+
+</svg>
+</div>
+
+</body>
+</html>
+
 
   <!-- PAGE 1 : HEART CARD -->
   <div class="page">
