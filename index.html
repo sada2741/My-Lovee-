@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Valentine ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Valentine ❤️</title>
 
 <style>
 body{
   margin:0;
-  background:#ffd6dc;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
+  background:#ffd6dc;
   font-family:'Segoe UI', sans-serif;
+  overflow:hidden;
 }
 
-.heart-container{
+/* floating background hearts */
+.bg-heart{
+  position:absolute;
+  color:rgba(230,57,70,0.15);
+  font-size:20px;
+  animation: float 8s linear infinite;
+}
+
+@keyframes float{
+  0%{ transform:translateY(100vh); }
+  100%{ transform:translateY(-10vh); }
+}
+
+.heart-box{
   width:90vw;
   max-width:420px;
+  z-index:2;
 }
 
 text{
   fill:white;
   text-anchor:middle;
 }
+
 .title{
   font-size:26px;
   font-weight:700;
 }
+
 .msg{
   font-size:16px;
 }
@@ -37,10 +54,16 @@ text{
 
 <body>
 
-<div class="heart-container">
-<svg viewBox="0 0 500 450" width="100%" height="auto">
-  
-  <!-- HEART SHAPE -->
+<!-- Background decoration -->
+<span class="bg-heart" style="left:10%; animation-delay:0s;">❤️</span>
+<span class="bg-heart" style="left:30%; animation-delay:2s;">💕</span>
+<span class="bg-heart" style="left:50%; animation-delay:4s;">💖</span>
+<span class="bg-heart" style="left:70%; animation-delay:1s;">💘</span>
+<span class="bg-heart" style="left:85%; animation-delay:3s;">💞</span>
+
+<!-- Center Heart -->
+<div class="heart-box">
+<svg viewBox="0 0 500 450" width="100%">
   <path
     d="M250 420
        L40 210
@@ -50,58 +73,11 @@ text{
     fill="#e63946"
   />
 
-  <!-- TEXT -->
   <text x="250" y="200" class="title">Hey My Love ❤️</text>
-
   <text x="250" y="235" class="msg">You are my favorite smile,</text>
   <text x="250" y="260" class="msg">my safe place,</text>
   <text x="250" y="285" class="msg">and my forever Valentine 💕</text>
-
 </svg>
-</div>
-
-</body>
-</html>
-
-
-  <!-- PAGE 1 : HEART CARD -->
-  <div class="page">
-    <div class="heart">
-      <div class="heart-text">
-        <h1>Hey My Love ❤️</h1>
-        <p>
-          You are my favorite smile,<br>
-          my safe place,<br>
-          and my forever Valentine 💕
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE 2 -->
-  <div class="page">
-    <div class="card simple">
-      Happy Valentine’s Day 💖<br><br>
-      I choose you. Always.
-    </div>
-  </div>
-
-  <!-- PAGE 3 -->
-  <div class="page">
-    <div class="card simple">
-      You’re One in a Million ✨<br><br>
-      And you’re mine ❤️
-    </div>
-  </div>
-
-  <!-- PAGE 4 -->
-  <div class="page">
-    <div class="card simple">
-      Sweet Like You 🍓<br><br>
-      Forever & Always 💌
-    </div>
-  </div>
-
 </div>
 
 </body>
