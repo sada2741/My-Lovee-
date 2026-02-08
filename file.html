@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Valentine’s Day ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 360px;
+      width: 90%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: beat 1.2s infinite;
+    }
+
+    button {
+      background: white;
+      color: #ff4e50;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffe6e6;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Happy Valentine’s Day</h1>
+    <h2>My Love 💕</h2>
+
+    <p id="message">
+      You are my favorite notification, my happiest thought,
+      and the reason my heart smiles every day.
+    </p>
+
+    <button onclick="changeMessage()">Tap for Surprise 💌</button>
+  </div>
+
+  <script>
+    const messages = [
+      "Every moment with you feels like magic ✨",
+      "You are my today and all of my tomorrows ❤️",
+      "My heart chose you… and it still does 💖",
+      "Life is beautiful because you are in it 🌸"
+    ];
+
+    function changeMessage() {
+      const random = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[random];
+    }
+  </script>
+</body>
+</html>
