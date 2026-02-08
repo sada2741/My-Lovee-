@@ -3,138 +3,110 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Valentine’s Day ❤️</title>
+<title>Valentine Cards 💖</title>
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
+  background:#ffd6dc;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffd6dc;
 }
 
-/* Background card grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  padding: 20px;
+/* Page container */
+.pages{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  height:100vh;
 }
 
-.card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  text-align: center;
-  color: #e63946;
-  font-weight: 600;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  font-size: 0.95rem;
+.page{
+  min-width:100vw;
+  scroll-snap-align:start;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* Center heart */
-.heart-wrapper {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Card style */
+.card{
+  width:85%;
+  max-width:360px;
+  background:#fff;
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
-.heart {
-  width: 280px;
-  height: 260px;
-  background: #e63946;
-  position: relative;
-  transform: rotate(-45deg);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+/* Heart card */
+.heart{
+  background:#e63946;
+  color:#fff;
+  position:relative;
+  transform:rotate(-45deg);
+  width:260px;
+  height:240px;
 }
 
 .heart::before,
-.heart::after {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 260px;
-  background: #e63946;
-  border-radius: 50%;
+.heart::after{
+  content:"";
+  position:absolute;
+  background:#e63946;
+  border-radius:50%;
+  width:260px;
+  height:240px;
 }
 
-.heart::before {
-  top: -140px;
-  left: 0;
+.heart::before{ top:-130px; left:0; }
+.heart::after{ left:130px; top:0; }
+
+.heart-text{
+  position:absolute;
+  inset:0;
+  transform:rotate(45deg);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
 }
 
-.heart::after {
-  left: 140px;
-  top: 0;
+.heart-text h1{
+  margin:0;
+  font-size:1.4rem;
 }
 
-.heart-text {
-  position: absolute;
-  inset: 0;
-  transform: rotate(45deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
+.heart-text p{
+  margin-top:10px;
+  font-size:.95rem;
+  line-height:1.4;
 }
 
-.heart-text h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.heart-text p {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* Mobile size */
-@media (max-width: 600px) {
-  .heart {
-    width: 220px;
-    height: 200px;
-  }
-  .heart::before,
-  .heart::after {
-    width: 220px;
-    height: 200px;
-  }
+/* Simple cards text */
+.simple{
+  color:#e63946;
+  font-size:1.1rem;
+  font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Background Cards -->
-<div class="grid">
-  <div class="card">Happy Valentine’s Day 💕</div>
-  <div class="card">I Love You ❤️</div>
-  <div class="card">You’re My Favorite 🌸</div>
-  <div class="card">Sweet Like You 🍓</div>
-  <div class="card">Forever Mine 💖</div>
-  <div class="card">XO XO 💋</div>
-  <div class="card">Be My Valentine 💌</div>
-  <div class="card">One in a Million ✨</div>
-</div>
+<div class="pages">
 
-<!-- Heart Content -->
-<div class="heart-wrapper">
-  <div class="heart">
-    <div class="heart-text">
-      <h1>Hey My Love ❤️</h1>
-      <p>
-        You are my favorite smile,  
-        my safest place,  
-        and my forever Valentine 💕  
-      </p>
+  <!-- PAGE 1 : HEART CARD -->
+  <div class="page">
+    <div class="heart">
+      <div class="heart-text">
+        <h1>Hey My Love ❤️</h1>
+        <p>
+          You are my favorite smile,<br>
+          my safe place,<br>
+          and my forever Valentine 💕
+        </p>
+      </div>
     </div>
   </div>
-</div>
-
-</body>
-</html>
