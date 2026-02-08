@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Valentine ❤️</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valentine ❤️</title>
 
 <style>
 body{
@@ -12,27 +12,36 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background:#ffd6dc;
+  background:#f2c2c9;
   font-family:'Segoe UI', sans-serif;
   overflow:hidden;
 }
 
-/* floating background hearts */
-.bg-heart{
+/* ---------- BACKGROUND PATTERN ---------- */
+.bg{
   position:absolute;
-  color:rgba(230,57,70,0.15);
-  font-size:20px;
-  animation: float 8s linear infinite;
+  inset:0;
+  z-index:0;
+  opacity:0.65; /* darker & visible */
+}
+
+.bg span{
+  position:absolute;
+  color:#c42b3a;
+  font-size:22px;
+  font-weight:600;
+  animation: float 14s linear infinite;
 }
 
 @keyframes float{
-  0%{ transform:translateY(100vh); }
-  100%{ transform:translateY(-10vh); }
+  0%{ transform:translateY(110vh); }
+  100%{ transform:translateY(-20vh); }
 }
 
+/* ---------- CENTER HEART ---------- */
 .heart-box{
-  width:90vw;
-  max-width:420px;
+  width:95vw;
+  max-width:560px; /* BIGGER HEART */
   z-index:2;
 }
 
@@ -42,26 +51,32 @@ text{
 }
 
 .title{
-  font-size:26px;
+  font-size:32px;
   font-weight:700;
 }
 
 .msg{
-  font-size:16px;
+  font-size:19px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Background decoration -->
-<span class="bg-heart" style="left:10%; animation-delay:0s;">❤️</span>
-<span class="bg-heart" style="left:30%; animation-delay:2s;">💕</span>
-<span class="bg-heart" style="left:50%; animation-delay:4s;">💖</span>
-<span class="bg-heart" style="left:70%; animation-delay:1s;">💘</span>
-<span class="bg-heart" style="left:85%; animation-delay:3s;">💞</span>
+<!-- BACKGROUND DECORATION -->
+<div class="bg">
+  <span style="left:5%;">Sweet 💕</span>
+  <span style="left:15%; animation-delay:2s;">🧁</span>
+  <span style="left:25%; animation-delay:4s;">Valentine</span>
+  <span style="left:35%; animation-delay:1s;">💌</span>
+  <span style="left:45%; animation-delay:3s;">LOVE</span>
+  <span style="left:55%; animation-delay:5s;">🍓</span>
+  <span style="left:65%; animation-delay:2s;">Sweet</span>
+  <span style="left:75%; animation-delay:4s;">💖</span>
+  <span style="left:85%; animation-delay:1s;">FOREVER</span>
+</div>
 
-<!-- Center Heart -->
+<!-- HEART -->
 <div class="heart-box">
 <svg viewBox="0 0 500 450" width="100%">
   <path
@@ -73,9 +88,9 @@ text{
     fill="#e63946"
   />
 
-  <text x="250" y="200" class="title">Hey My Love ❤️</text>
-  <text x="250" y="235" class="msg">You are my favorite smile,</text>
-  <text x="250" y="260" class="msg">my safe place,</text>
+  <text x="250" y="185" class="title">Hey My Love ❤️</text>
+  <text x="250" y="225" class="msg">You are my favorite smile,</text>
+  <text x="250" y="255" class="msg">my safe place,</text>
   <text x="250" y="285" class="msg">and my forever Valentine 💕</text>
 </svg>
 </div>
