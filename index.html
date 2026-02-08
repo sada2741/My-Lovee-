@@ -3,66 +3,60 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Printable Valentine’s Day Cards</title>
+<title>Valentine’s Day ❤️</title>
 
 <style>
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #ffd6dc;
 }
 
-/* Grid Background */
+/* Background card grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
+  gap: 16px;
   padding: 20px;
 }
 
 .card {
   background: #fff;
   border-radius: 12px;
-  padding: 15px;
+  padding: 18px;
   text-align: center;
-  font-weight: 600;
   color: #e63946;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  font-size: 0.95rem;
 }
 
-.card span {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-/* Center Heart */
+/* Center heart */
 .heart-wrapper {
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  pointer-events: none;
+  align-items: center;
 }
 
 .heart {
-  background: #e63946;
-  color: #fff;
   width: 280px;
   height: 260px;
+  background: #e63946;
   position: relative;
   transform: rotate(-45deg);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
 }
 
 .heart::before,
 .heart::after {
   content: "";
-  background: #e63946;
-  border-radius: 50%;
+  position: absolute;
   width: 280px;
   height: 260px;
-  position: absolute;
+  background: #e63946;
+  border-radius: 50%;
 }
 
 .heart::before {
@@ -75,33 +69,31 @@ body {
   top: 0;
 }
 
-.heart-content {
+.heart-text {
   position: absolute;
   inset: 0;
+  transform: rotate(45deg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transform: rotate(45deg);
+  justify-content: center;
   text-align: center;
   padding: 20px;
+  color: #fff;
 }
 
-.heart h1 {
+.heart-text h1 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
-.heart h2 {
-  margin: 8px 0;
-  font-weight: 400;
+.heart-text p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
-.heart p {
-  font-size: 0.9rem;
-}
-
-/* Mobile Fix */
+/* Mobile size */
 @media (max-width: 600px) {
   .heart {
     width: 220px;
@@ -120,23 +112,26 @@ body {
 
 <!-- Background Cards -->
 <div class="grid">
-  <div class="card">Happy Valentine’s 💕</div>
-  <div class="card">You’re One in a Million ❤️</div>
-  <div class="card">Love You Forever 💖</div>
+  <div class="card">Happy Valentine’s Day 💕</div>
+  <div class="card">I Love You ❤️</div>
+  <div class="card">You’re My Favorite 🌸</div>
   <div class="card">Sweet Like You 🍓</div>
-  <div class="card">Be Mine 💌</div>
-  <div class="card">Everyday is Love 🌸</div>
+  <div class="card">Forever Mine 💖</div>
   <div class="card">XO XO 💋</div>
-  <div class="card">My Favorite Person 😘</div>
+  <div class="card">Be My Valentine 💌</div>
+  <div class="card">One in a Million ✨</div>
 </div>
 
-<!-- Center Heart -->
+<!-- Heart Content -->
 <div class="heart-wrapper">
   <div class="heart">
-    <div class="heart-content">
-      <h1>Printable</h1>
-      <h2>Valentine’s Day</h2>
-      <p>Cards Made With Love ❤️</p>
+    <div class="heart-text">
+      <h1>Hey My Love ❤️</h1>
+      <p>
+        You are my favorite smile,  
+        my safest place,  
+        and my forever Valentine 💕  
+      </p>
     </div>
   </div>
 </div>
